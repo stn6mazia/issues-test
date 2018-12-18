@@ -6,6 +6,7 @@
 
 .theList {
     list-style: none;
+    padding-left: 0;
 }
 
 .issue-item {
@@ -48,4 +49,19 @@
 
 .green{
     background-color: green;
+}
+
+.edit {
+    color: white;
+}
+
+.edit:hover {
+    color: rgb(167, 167, 167);
+}
+
+.editing {
+    color: white !important;
+    background-color: rgb(70, 70, 70) !important;
+    border: solid 0.5px rgb(143, 143, 143) !important;
+    margin-bottom: 1rem;
 }
