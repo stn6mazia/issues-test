@@ -8,7 +8,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 var destnation = document.querySelector('#content');
 
 ReactDOM.render(
-    <div>
+    <div id="app">
         <TodoList/>
     </div>,
     destnation

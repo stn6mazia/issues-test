@@ -89,7 +89,7 @@ class TodoList extends Component {
           <div className="row header">
             <div className="col-3"></div>
             <div className="col-6">
-              <h1>OLAR</h1>
+              <h1 className="title">Your Kamban</h1>
               <div className="row">
                 <div className="col-6 buton-top">
                   <button className="btn btn-success" onClick={() => this.createItem()}>Create New Item</button>
