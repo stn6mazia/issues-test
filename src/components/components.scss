@@ -1,22 +1,51 @@
-/* Issue */
+/* Issues */
 
-.issue-box {
-    border-radius: 10px;
+.issue-box{
+    text-align: center;
+}
+
+.theList {
+    list-style: none;
+}
+
+.issue-item {
+    background-color: rgb(129, 127, 127);
+    color: white;
     border: solid 1px transparent;
-    background-color: rgb(75, 75, 75);
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    padding-bottom: 0;
 }
 
-.issue-content {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+.issue-text {
+    text-align: left
 }
 
-.issue-title {
-    color: antiquewhite;
-    text-align: left;
-    font-weight: 500;
-    font-size: 1rem;
-    margin-bottom: 0;
+.no-decoration {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.x {
+    color: white;
+}
+
+.x:hover {
+    color: red;
+}
+
+.check {
+    color: white;
+}
+
+.check:hover {
+    color: green;
+}
+
+.green{
+    background-color: green;
 }
