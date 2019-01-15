@@ -5,8 +5,26 @@
 }
 
 .title {
+    padding-bottom: 2rem;
+    padding-top: 4rem;
     text-align: center;
     color: white;
+}
+
+.create-input {
+    background-color: rgb(58, 58, 58);
+    color: white;
+    text-align: left;
+    border-radius: 10px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.no-issue {
+    padding-top: 2rem;
+    font-size: 2rem;
 }
 
 .issues-box {
@@ -17,4 +35,27 @@
     text-align: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+.buttons-section {
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.button-left {
+    text-align: right;
+}
+
+.button-right {
+    text-align: left;
+}
+
+.btn-black {
+    width: 100%;
+    border-radius: 13px;
+    background-color: rgb(143, 143, 143);
+    color: rgb(228, 228, 228);
+    font-size: 1.4rem;
+    font-weight: 800;
 }

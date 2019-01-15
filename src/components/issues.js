@@ -6,22 +6,58 @@ class Issues extends Component {
     super(props);
 
     this.state = {
-      editing: false,
-      done: false
+      pending: true,
+      open: "#28a745",
+      closed: "rgb(143, 143, 143)"
     }
 
     this.createIssue = this.createIssue.bind(this);
     this.update = this.update.bind(this);
   }
 
+  setOpenIssue() {
+    this.setState({
+      pending: true
+    })
+    console.log(this.state.pending.value);
+  }
+
+  setclosedIssue() {
+    this.setState({
+      pending: false
+    })
+    console.log(this.state.pending.value);
+  }
+
   createIssue(item) {
     return (
       <li className="issue-item" key={item.key}>
         <div className="row">
-          <div className="col-9 issue-text">
+          <div className="col-1">
             {
-              !this.state.editing ?
-                <p>{item.text}</p>
+              this.state.pending ?
+                <div className="btn-group" data-toggle="buttons">
+                  <button style={{ backgroundColor: this.state.open }} onClick={() => this.setclosedIssue()} className="btn btn-success btn-no-margin"></button>
+                </div>
+                : null
+            }
+            {
+              !this.state.pending ?
+                <div className="btn-group" data-toggle="buttons">
+                  <button style={{ backgroundColor: this.state.closed }} onClick={() => this.setOpenIssue()} className="btn btn-success btn-no-margin"></button>
+                </div>
+                : null
+            }
+          </div>
+          <div className="col-10 issue-text">
+            {
+              !this.state.editing && this.state.pending ?
+                <p className="issue-title">{item.text}</p>
+                : null
+            }
+            {
+              !this.state.editing && !this.state.pending ?
+                <p className="issue-title-risk">{item.text}</p>
                 : null
             }
             {
@@ -47,23 +83,6 @@ class Issues extends Component {
                 </a>
                 : null
             }
-          </div>
-          <div className="col-1 issue-status">
-            {
-              !this.state.done ?
-                <a onClick={() => {
-                  item.status = false;
-                  this.changeStatus()
-                  }} className="no-decoration">
-                  <span class="fas fa-check check"></span>
-                </a>
-                : null
-            }
-          </div>
-          <div className="col-1 issue-status">
-            <a onClick={() => this.delete(item.key)} className="no-decoration">
-              <span class="fas fa-times x"></span>
-            </a>
           </div>
         </div>
       </li>
@@ -104,7 +123,7 @@ class Issues extends Component {
           <div className="row">
             <div className="col-12">
               <ul className="theList">
-                {itens}
+              {itens}
               </ul>
             </div>
           </div>
